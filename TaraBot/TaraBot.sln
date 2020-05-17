@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29911.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaraBot", "TaraBot\TaraBot.csproj", "{5D034A5C-CA99-4E0E-8DEF-BA9ED6B542BE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaraBot.Service", "TaraBot.Service\TaraBot.Service.csproj", "{C6E01784-D404-481D-95D5-AB7989EE29E5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{37143B00-2BE2-4246-BEF4-0ADDE8A15C89}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TataBot.Common", "TataBot.Common\TataBot.Common.csproj", "{B6241742-D6CF-4170-84C4-5F6EEE609851}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5D034A5C-CA99-4E0E-8DEF-BA9ED6B542BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D034A5C-CA99-4E0E-8DEF-BA9ED6B542BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D034A5C-CA99-4E0E-8DEF-BA9ED6B542BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D034A5C-CA99-4E0E-8DEF-BA9ED6B542BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6E01784-D404-481D-95D5-AB7989EE29E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6E01784-D404-481D-95D5-AB7989EE29E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6E01784-D404-481D-95D5-AB7989EE29E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6E01784-D404-481D-95D5-AB7989EE29E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6241742-D6CF-4170-84C4-5F6EEE609851}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6241742-D6CF-4170-84C4-5F6EEE609851}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6241742-D6CF-4170-84C4-5F6EEE609851}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6241742-D6CF-4170-84C4-5F6EEE609851}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8240D7D6-C50A-41A1-A855-2D81D4663BF6}
+	EndGlobalSection
+EndGlobal

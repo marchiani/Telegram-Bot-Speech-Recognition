@@ -1,0 +1,8 @@
+.vs/
+obj/
+bin/
+*.user
+packages/
+ShyftLabs/ShyftLabs.Database/ShyftLabs.Database.dbmdl
+ShyftLabs/ShyftLabs.Database/ShyftLabs.Database.jfm
+ngrok.exe
