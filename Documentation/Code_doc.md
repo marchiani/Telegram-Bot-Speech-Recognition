@@ -22,7 +22,7 @@
             {
                 public string Token { get; set; }
             }
-        "SmallTalkSettings": {"Token": "68c1569f04924042bd08d8f43f203aa2"}
+        "SmallTalkSettings": {"Token": "Bot's Token"}
 
 
 ##### 3. Відправлення ботом повідомлень до клієнта
@@ -108,3 +108,27 @@
                             break;
                     }
                 }                        
+##### 7. Конвертація аудіофайлу в формат, який підтримується ботом
+      var zamzarJob = ZamzarHelper.Upload<ZamzarJobResponseModel>(ZamzarSettings.SecretKey, jobEndpoint, pathToAudio, "wav").Result;
+
+                  string getStatusConvertingEndpoint = $"{jobEndpoint}/{zamzarJob.Id}";
+
+                  while (true)
+                  {
+                      zamzarJob = ZamzarHelper.GetSimpleResponse<ZamzarJobResponseModel>(ZamzarSettings.SecretKey, getStatusConvertingEndpoint).Result;
+                      if (zamzarJob.Status == "successful")
+                      {
+                          break;
+                      }
+                  }
+
+                  string downloadConvertedFileEndpoint = $"{ZamzarSettings.BaseAPIUrl}files/{zamzarJob.TargetFiles.First().Id}/content";
+                  pathToAudio = Path.ChangeExtension(pathToAudio, ".wav");
+
+                  await ZamzarHelper.Download(ZamzarSettings.SecretKey, downloadConvertedFileEndpoint, pathToAudio);
+
+##### 8. Транскрибація (визначення подальших дій для відповіді на голосове повідомлення або аудіофайл)
+      using var audioInput = AudioConfig.FromWavFileInput(pathToAudio);
+                  using var recognizer = new SpeechRecognizer(config, autoDetectSourceLanguageConfig, audioInput);
+
+                  var speechRecognitionResult = await recognizer.RecognizeOnceAsync();
